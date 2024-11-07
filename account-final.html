@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<title>Account | SGC</title>
+		<link rel="stylesheet" href="css/final_reset.css">
+		<link rel="stylesheet" href="css/final_base.css">
+	</head>
+	<body>
+
+	<!-- Header Section -->
+		<header>
+			<nav>
+				<ul>
+					<li><a href="home-final.html" target="_self">Home</a></li>
+					<li><a href="shop-final.html" target="_self">Shop</a></li>
+					<li><a href="contact-final.html" target="_self">Contact</a></li>
+					<li><a href="account-final.html" class="active" target="_self">Account</a></li>
+					<li><a href="cite-final.html" target="_self">Cite</a></li>
+				</ul>
+			</nav>
+		</header>
+    
+	<!-- Account Page -->
+		<section class="account">
+
+			<h2>My Account</h2>
+			<p>Welcome Back, John!</p>
+			<img src="images/avatar.png" alt="User Avatar" height="100" width="100">
+
+			<div class="offer">
+				<button id="reveal-code">Check For Special Offer Codes</button>
+				<div id="code" class="hidden">Congrats! 10% Off with this code: LUCKY10</div>
+				<script>
+				const revealButton = document.getElementById('reveal-code');
+				const codeDiv = document.getElementById('code');
+
+				revealButton.addEventListener('click', () => {
+				  codeDiv.classList.toggle('visible');
+				});
+				</script>
+			</div>
+
+			<ul>
+				<li class="titles">Account Info:</li>
+				<li>NAME: John Doe</li>
+				<li>EMAIL: jdoe@hotmail.com</li>
+				<li>LOYALTY REWARDS#: 00235478</li>
+				<li>MEMBER SINCE: 2019/08/21</li>
+			</ul>
+			<ul>
+				<li class="titles">Billing Info:</li>
+				<li>ADDRESS: 123 Main Street</li>
+				<li>CITY: Vancouver</li>
+				<li>PROVINCE/STATE: BC - Canada</li>
+				<li>ZIP/POSTAL CODE: V4U 9P6</li>
+				<li>DEFAULT PAYMENT METHOD: Visa - 4931</li>
+			</ul>
+
+			<h3>Purchase History</h3>
+			<div class="accordion">2023/02/10 | Order 1 - Shipped</div>
+			<div class="panel">
+				<p>Callaway Paradym Driver - $799.99</p>
+				<p>Ping G430 Iron Set - $1649.99</p>
+				<p>TaylorMade TP Hydro Blast3 Putter - $270.99</p>
+				<p>Subtotal: $2720.97</p>
+				<p>Discount: $0</p>
+				<p>Taxes: $326.52</p>
+				<p>Total: $3047.49</p>
+				<p>Approved - Visa 4931</p>
+			</div>
+
+			<div class="accordion">2022/12/22 | Order 2 - Completed</div>
+			<div class="panel">
+				<p>Titleist | Hybrid 5 Stand Bag - $379.99</p>
+				<p>Discount: $0</p>
+				<p>Taxes: $45.60</p>
+				<p>Total: $425.59.49</p>
+				<p>Approved - $250 Gift Card 0001</p>
+				<p>Approved - $175.59 Visa 4931</p>
+			</div>
+
+			<div class="accordion">2022/10/01 | Order 3 - Completed</div>
+			<div class="panel">
+				<p>Titleist | Pro V1 Golf Balls - $72.99</p>
+				<p>Nike | Air Max 270 G Spikeless Golf Shoe $194.99</p>
+				<p>Discount: 33% Off Footwear -$65.01</p>
+				<p>Subtotal: 202.97</p>
+				<p>Taxes: $24.36</p>
+				<p>Total: $227.33</p>
+				<p>Approved - Visa 4931</p>
+			</div>
+
+			<script>
+				const accordions = document.querySelectorAll('.accordion');
+
+				accordions.forEach(accordion => {
+				  accordion.addEventListener('click', function() {
+					this.classList.toggle('active');
+					const panel = this.nextElementSibling;
+					if (panel.style.display === 'block') {
+					  panel.style.display = 'none';
+					} else {
+					  panel.style.display = 'block';
+					}
+				  });
+				});
+			</script>
+
+
+			<h3>Change Page Theme:</h3>
+			<button id="bg-red">Red</button>
+			<button id="bg-green">Green</button>
+			<button id="bg-blue">Blue</button>
+			<script>
+				const body = document.querySelector("body");
+				const redButton = document.querySelector("#bg-red");
+				const greenButton = document.querySelector("#bg-green");
+				const blueButton = document.querySelector("#bg-blue");
+
+				redButton.addEventListener("click", function () {
+				  body.style.backgroundColor = "#FFA07A";
+				});
+
+				greenButton.addEventListener("click", function () {
+				  body.style.backgroundColor = "#ADFF2F";
+				});
+
+				blueButton.addEventListener("click", function () {
+				  body.style.backgroundColor = "#ADD8E6";
+				});
+			</script>
+
+			<h3>Preferences:</h3>
+			<p>Change Password:</p>
+			<form action="echo_my_form.php" id="password-form" method="POST">
+				<label for="current-password">Current Password:</label>
+				<input type="text" id="current-password" name="current-password" required>
+				<label for="new-password">New Password:</label>
+				<input type="text" id="new-password" name="new-password" required>
+				<label for="new-password-again">Confirm New Password:</label>
+				<input type="text" id="new-password-again" name="new-password-again" required>
+				<label for="human">Are you Human? 5 * 2 + 6 = ?:</label>
+				<input type="number" id="human" name="human" required>
+				<button type="submit">Submit</button>
+			</form>
+
+			<div id="logout">
+				<button>Logout</button>
+			</div>
+		</section>
+
+	<!-- Footer Section -->
+		<footer>
+			<div class="footer-content">
+				<p>&copy; Summit Golf Company. All rights reserved. - J.Chernenko A00745858</p>
+			</div>
+		</footer>
+	</body>
+</html>

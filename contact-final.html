@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | SGC</title>
+    <link rel="stylesheet" href="css/final_reset.css">
+    <link rel="stylesheet" href="css/final_base.css">
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header>
+      <nav>
+        <ul>
+          <li><a href="home-final.html" target="_self">Home</a></li>
+          <li><a href="shop-final.html" target="_self">Shop</a></li>
+          <li><a href="contact-final.html" class="active" target="_self">Contact</a></li>
+          <li><a href="account-final.html" target="_self">Account</a></li>
+		  <li><a href="cite-final.html" target="_self">Cite</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Contact Page -->
+    <section class="contact">
+      <h2>Contact Us</h2>
+      <p>Please choose one of the following options to contact us:</p>
+      <ul>
+        <li>Email: <a href="#">info@summitgolf.com</a></li>
+        <li>Phone: 123-456-7890</li>
+        <li>Live Chat: Click on the chat icon at the bottom right corner of the screen</li>
+      </ul>
+      <h3>Send us a message:</h3>
+      <form action="echo_my_form.php" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+		<label for="topic">Topic:</label>
+		<select name="topic" id="topic">
+			<option value="product-info">Product Info</option>
+			<option value="ordering">Ordering</option>
+			<option value="shipping">Shipping</option>
+			<option value="my-account">My Account</option>
+			<option value="technical-help">Technical Help</option>
+			<option value="other">Other</option>
+		</select>
+        <label for="message">Message:</label>
+        <textarea name="message" id="message" rows="5" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+	  
+	  <div class="chat">
+		<button type="submit">Chat with Us!</button>
+	  </div>
+	  
+	  
+    </section>
+
+<!-- Footer Section -->
+<footer>
+  <div class="footer-content">
+    <p>&copy; Summit Golf Company. All rights reserved. - J.Chernenko A00745858</p>
+  </div>
+</footer>
+  </body>
+</html>

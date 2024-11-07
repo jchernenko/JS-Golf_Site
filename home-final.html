@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | SGC</title>
+    	<link rel="stylesheet" href="css/final_reset.css">
+		<link rel="stylesheet" href="css/final_base.css">
+    <style>
+	
+      .home {
+        height: 100vh;
+        background-image: url("images/golf.jpg");
+        background-size: cover;
+        background-position: center;
+        color: #fff;
+      }
+
+    </style>
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header>
+      <nav>
+        <ul>
+          <li><a href="home-final.html" class="active" target="_self">Home</a></li>
+          <li><a href="shop-final.html" target="_self">Shop</a></li>
+          <li><a href="contact-final.html" target="_self">Contact</a></li>
+          <li><a href="account-final.html" target="_self">Account</a></li>
+          <li><a href="cite-final.html" target="_self">Cite</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Home Page -->
+    <section class="home">
+      <div class="home-content">
+        <h1>Welcome to Summit Golf Co.</h1>
+        <p>Experience the Perfect Drive with Our Premium Golf Supplies!</p>
+		<div id="golf-image">
+        <img src="images/golfball.png" alt="Golf Ball Image" width="150" height="85">
+		</div>
+
+        <button id="enter-button">CLICK FOR A CHANCE TO WIN A $500 GIFT CARD!</button>
+        <script>
+          const enterButton = document.getElementById("enter-button");
+          enterButton.addEventListener("click", function() {
+          alert("Sorry, not a winner!");
+          });
+        </script>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+      <div class="footer-content">
+        <p>&copy; Summit Golf Company. All rights reserved. - J.Chernenko A00745858</p>
+      </div>
+    </footer>
+  </body>
+</html>
